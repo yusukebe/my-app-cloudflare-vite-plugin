@@ -6,7 +6,6 @@ const Component = () => {
   useEffect(() => {
     ;(async () => {
       const res = await fetch('/api')
-      console.log(res)
       const data = await res.json<{ message: string }>()
       setMessage(data.message)
     })()
